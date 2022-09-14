@@ -1,0 +1,86 @@
+:root{
+    --primary-color:rgb(10, 255, 149);
+    --nav-height: 50vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+nav{
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+    height: var(--nav-height);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 2;
+    background-color: transparent;
+}
+
+header{
+    background: transparent;
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 10px;
+    align-items: center;
+    justify-content:space-around;
+    border-bottom: 1px solid #ffffff2a;
+}
+header h1{
+    color: white;
+    text-transform: capitalize;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.links a:not(.login){
+    margin-left: 30px;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: capitalize;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+}
+.links a:not(.login):hover{
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: -2px;
+}
+.links a:hover{
+ filter: brightness(80%)
+}
+
+
+.links .login {
+    position: relative;
+    color: white;
+    display: inline-block;
+    margin-left: auto;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    backdrop-filter: blur(100px);
+    z-index: 1;
+    border: 1px solid #ffffff2a;
+}
+
+.hero-video{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    transform: translateY(-var(--nav-height));
+    z-index: 1;
+}
+
+
